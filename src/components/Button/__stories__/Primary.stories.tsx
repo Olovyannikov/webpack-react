@@ -1,18 +1,10 @@
-import { Button, ButtonProps, ConfigProvider, Space } from 'antd';
+import { Button, ButtonProps } from 'antd';
 
 import { ComponentMeta } from '@storybook/react';
-import { theme } from '../../../../theme.config';
 
 export default {
     title: 'UI-Kit / Button / Primary',
     component: Button,
-    decorators: [
-        (Story) => (
-            <ConfigProvider theme={theme}>
-                <Story />
-            </ConfigProvider>
-        ),
-    ],
     argTypes: {
         block: {
             control: 'boolean',
