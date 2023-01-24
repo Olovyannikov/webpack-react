@@ -1,9 +1,11 @@
 import { Button, ButtonProps } from 'antd';
+import { SearchOutlined, ZoomInOutlined } from '@ant-design/icons';
 
 import { ComponentMeta } from '@storybook/react';
+import React from 'react';
 
 export default {
-    title: 'UI-Kit / Button / Primary',
+    title: 'UI-Kit / General / Button / Primary',
     component: Button,
     argTypes: {
         block: {
@@ -20,15 +22,15 @@ export default {
         },
         type: {
             options: ['primary', 'dashed', 'text', 'link'],
-            control: { type: 'select' },
+            control: 'select',
         },
         shape: {
             options: ['default', 'circle', 'round'],
-            control: { type: 'select' },
+            control: 'select',
         },
         size: {
             options: ['large', 'default', 'small'],
-            control: { type: 'select' },
+            control: 'select',
         },
     },
 } as ComponentMeta<typeof Button>;
@@ -40,7 +42,7 @@ export const Primary = (props: ButtonProps) => (
 
 export const PrimaryDanger = (props: ButtonProps) => {
     return (
-        <Button {...props} type="primary" danger>
+        <Button type="primary" danger {...props}>
             Primary Danger
         </Button>
     );
@@ -48,7 +50,7 @@ export const PrimaryDanger = (props: ButtonProps) => {
 
 export const PrimaryDisabled = (props: ButtonProps) => {
     return (
-        <Button {...props} type="primary" disabled>
+        <Button type="primary" disabled {...props}>
             Primary Disabled
         </Button>
     );
@@ -56,7 +58,7 @@ export const PrimaryDisabled = (props: ButtonProps) => {
 
 export const PrimaryGhost = (props: ButtonProps) => {
     return (
-        <Button {...props} type="primary" ghost>
+        <Button type="primary" ghost {...props}>
             Primary Ghost
         </Button>
     );
@@ -64,7 +66,7 @@ export const PrimaryGhost = (props: ButtonProps) => {
 
 export const PrimaryGhostDanger = (props: ButtonProps) => {
     return (
-        <Button {...props} type="primary" ghost danger>
+        <Button type="primary" ghost danger {...props}>
             Primary Ghost Danger
         </Button>
     );
@@ -72,8 +74,32 @@ export const PrimaryGhostDanger = (props: ButtonProps) => {
 
 export const PrimaryGhostDisabled = (props: ButtonProps) => {
     return (
-        <Button {...props} type="primary" ghost disabled>
+        <Button type="primary" ghost disabled {...props}>
             Primary Ghost Disabled
+        </Button>
+    );
+};
+
+export const PrimaryWithIcon = (props: ButtonProps) => {
+    return (
+        <Button type="primary" icon={<ZoomInOutlined />} {...props}>
+            With Icon
+        </Button>
+    );
+};
+
+export const PrimaryIconOnly = (props: ButtonProps) => {
+    return <Button type="primary" icon={<ZoomInOutlined />} {...props} />;
+};
+
+export const PrimaryIconOnlyCircle = (props: ButtonProps) => {
+    return <Button type="primary" icon={<SearchOutlined />} shape="circle" {...props} />;
+};
+
+export const PrimaryRound = (props: ButtonProps) => {
+    return (
+        <Button type="primary" shape="round" {...props}>
+            Primary Rounded
         </Button>
     );
 };

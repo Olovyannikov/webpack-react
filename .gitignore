@@ -31,7 +31,7 @@ jspm_packages/
 web_modules/
 *.tsbuildinfo
 .npm
-.npmrc1123123
+.npmrc
 .eslintcache
 .rpt2_cache/
 .rts2_cache_cjs/
