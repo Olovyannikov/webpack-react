@@ -61,12 +61,15 @@ export const theme: ThemeConfig = {
         colorInfo: '#CD93E1',
         colorText: '#1a1a1a',
         colorTextSecondary: '#000000',
+        // Text for List.Meta description
         colorTextTertiary: '#1a1a1a',
         colorTextQuaternary: '#cccccc',
         colorBorder: '#dddddd',
         colorBorderSecondary: '#eeeeee',
-        colorFill: '#EEEBF5',
-        colorFillSecondary: '#E6E1F0',
+        // skeleton
+        colorFill: '#00000005',
+        colorFillSecondary: '#5a5a5a1a',
+
         colorFillTertiary: '#ffffff',
         colorBgContainer: '#ffffff',
         colorBgElevated: '#ffffff',
@@ -79,12 +82,14 @@ export const theme: ThemeConfig = {
         fontSizeHeading3: 24,
         fontSizeHeading4: 20,
         fontSizeHeading5: 16,
-        lineHeight: 1.6,
+        lineHeight: 1.5,
         lineHeightLG: 1.5,
         lineHeightHeading1: 1.2,
         borderRadius: 2,
         borderRadiusXS: 2,
-        colorBgMask: '#FA541C',
+        colorBgMask: '#00000073',
+        fontFamily:
+            'SB Sans Text, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji',
     },
     components: {
         Button: {
@@ -94,9 +99,12 @@ export const theme: ThemeConfig = {
             colorError: '#f57a87',
         },
         Typography: {
-            colorLink: '#462786',
-            colorLinkActive: '#462786',
-            colorLinkHover: '#462786',
+            colorLink: '#8D57A0',
+            colorLinkActive: '#682E7C',
+            colorLinkHover: '#682E7C',
+            colorTextDisabled: '#d2bcd9',
+            sizeMarginHeadingVerticalStart: 0,
+            sizeMarginHeadingVerticalEnd: 0,
         },
         Slider: {
             colorPrimaryBorder: '#563599',
@@ -104,11 +112,14 @@ export const theme: ThemeConfig = {
         },
         Select: {
             colorWarningHover: '#E49701',
+            controlItemBgHover: '#F9F9F9',
         },
         Dropdown: {
             colorPrimaryBorder: '#FA541C',
-            controlItemBgActiveHover: '#e6e1f0',
-            controlItemBgHover: '#f7f7f7',
+            controlItemBgActiveHover: '#f4eef6',
+            controlItemBgHover: '#f4eef6',
+            colorText: '#8d57a0',
+            controlItemBgActive: '#f4eef6',
         },
         DatePicker: {
             colorLink: '#563599',
@@ -118,8 +129,18 @@ export const theme: ThemeConfig = {
         Message: {
             colorInfo: '#cd93e1',
         },
-        Radio: {
-            colorTextDisabled: '#ccc',
+        Segmented: {
+            colorInfoBg: 'red',
+            colorBgContainer: 'red',
+            // color selected segment bg
+            colorBgElevated: '#fff',
+            // color of segmented bg
+            colorBgLayout: '#fff',
         },
+        Table: {
+            colorFillAlter: '#f4eef6',
+        },
+        Alert: {},
+        Skeleton: {},
     },
 };

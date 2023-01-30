@@ -1,5 +1,7 @@
-const { isDev } = require('./webpack.helpers')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const { isDev } = require('./webpack.helpers');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+const styleLoader = isDev() ? 'style-loader' : MiniCssExtractPlugin.loader;
 
 module.exports = [
     {
@@ -15,17 +17,36 @@ module.exports = [
     },
     {
         // CSS Loader
-        test: /\.css$/,
+        test: /\.css$/i,
+        exclude: /\.module\.css/i,
         use: [
-            { loader: isDev() ? 'style-loader' : MiniCssExtractPlugin.loader },
+            { loader: styleLoader },
             {
                 loader: 'css-loader',
                 options: {
+                    importLoaders: 2,
+                    modules: false,
+                },
+            },
+            { loader: 'postcss-loader' },
+        ],
+    },
+    {
+        test: /\.module\.css$/i,
+        use: [
+            { loader: styleLoader },
+            {
+                loader: 'css-loader',
+                options: {
+                    importLoaders: 2,
                     modules: {
-                        localIdentName: isDev() ? '[folder]__[local]--[hash:base64:5]' : '[hash:base64:5]',
+                        localIdentName: isDev()
+                            ? '[folder]__[local]--[hash:base64:5]'
+                            : '[hash:base64:5]',
                     },
                 },
             },
+            { loader: 'postcss-loader' },
         ],
     },
     {
@@ -37,7 +58,9 @@ module.exports = [
                 loader: 'css-loader',
                 options: {
                     modules: {
-                        localIdentName: isDev() ? '[folder]__[local]--[hash:base64:5]' : '[hash:base64:5]',
+                        localIdentName: isDev()
+                            ? '[folder]__[local]--[hash:base64:5]'
+                            : '[hash:base64:5]',
                     },
                 },
             },
@@ -47,15 +70,14 @@ module.exports = [
     {
         // Less loader
         test: /\.less$/,
-        use: [{ loader: isDev() ? 'style-loader' : MiniCssExtractPlugin.loader }, { loader: 'css-loader' }, { loader: 'less-loader' }],
+        use: [
+            { loader: isDev() ? 'style-loader' : MiniCssExtractPlugin.loader },
+            { loader: 'css-loader' },
+            { loader: 'less-loader' },
+        ],
     },
     {
-        // Assets loader
-        // More information here https://webpack.js.org/guides/asset-modules/
-        test: /\.(gif|jpe?g|tiff|png|webp|bmp|svg|eot|ttf|woff|woff2)$/i,
-        type: 'asset',
-        generator: {
-            filename: 'assets/[hash][ext][query]',
-        },
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
     },
-]
+];

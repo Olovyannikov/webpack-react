@@ -1,0 +1,78 @@
+@font-face {
+    font-family: 'SB Sans Text';
+    src: url('../../fonts/SBSansText-Regular.woff2'),
+    url('../../fonts/SBSansText-Regular.woff');
+}
+
+@font-face {
+    font-family: 'SB Sans Text';
+    src: url('../../fonts/SBSansText-Light.woff2'),
+    url('../../fonts/SBSansText-Light.woff');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'SB Sans Text';
+    src: url('../../fonts/SBSansText-Medium.woff2'),
+    url('../../fonts/SBSansText-Medium.woff');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'SB Sans Text';
+    src: url('../../fonts/SBSansText-Semibold.woff2'),
+    url('../../fonts/SBSansText-Semibold.woff');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'SB Sans Text';
+    src: url('../../fonts/SBSansText-Bold.woff2'),
+    url('../../fonts/SBSansText-Bold.woff');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'SB Sans UI Caps';
+    src: url('../../fonts/SBSansUI-Caps.woff2'),
+    url('../../fonts/SBSansUI-Caps.woff');
+}
+
+@font-face {
+    font-family: 'SB Sans Interface';
+    src: url('../../fonts/SBSansUI-Regular.woff2'),
+    url('../../fonts/SBSansUI-Regular.woff');
+}
+
+@font-face {
+    font-family: 'SB Sans Interface';
+    src: url('../../fonts/SBSansUI-Light.woff2'),
+    url('../../fonts/SBSansUI-Light.woff');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'SB Sans Interface';
+    src: url('../../fonts/SBSansUI-Semibold.woff2'),
+    url('../../fonts/SBSansUI-Semibold.woff');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'SB Sans Text Cond';
+    src: url('../../fonts/SBSansCondMono-Regular.woff2'),
+    url('../../fonts/SBSansCondMono-Regular.woff');
+}
+
+@font-face {
+    font-family: 'SB Sans Text Cond';
+    src: url('../../fonts/SBSansCondMono-Bold.woff2'),
+    url('../../fonts/SBSansCondMono-Bold.woff');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'SB Sans Text Mono';
+    src: url('../../fonts/SBSansTextMono-Regular.woff2'),
+    url('../../fonts/SBSansTextMono-Regular.woff');
+}

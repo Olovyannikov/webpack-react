@@ -10,6 +10,17 @@ module.exports = {
     },
     staticDirs: ['../public'],
     webpackFinal: (config) => {
+        config.module.rules
+            .filter(rule => rule.test.test('.svg'))
+            .forEach(rule => rule.exclude = /\.svg$/i);
+
+        config.module.rules.push({
+            test: /\.svg$/,
+            use: [
+                {
+                    loader: '@svgr/webpack'
+                }]
+        })
         config.resolve.plugins = config.resolve.plugins || [];
         config.resolve.plugins.push(
             new TsconfigPathsPlugin({

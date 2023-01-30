@@ -1,0 +1,4 @@
+:where(.ant-segmented-item-label) {
+    position: relative;
+    z-index: 1;
+}

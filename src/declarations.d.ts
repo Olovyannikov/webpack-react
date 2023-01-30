@@ -14,3 +14,8 @@ declare module '!!raw-loader!*' {
     const contents: string;
     export = contents;
 }
+
+declare module "*.svg" {
+    const content: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
+    export default content;
+}

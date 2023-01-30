@@ -1,1 +1,4 @@
-@import './ant/button.css';
+@import "~antd/dist/reset.css";
+@import './general/_fonts.css';
+@import "./ant/segmented.css";
+@import "./ant/skeleton.css";

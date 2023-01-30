@@ -3,12 +3,10 @@ const { isDev } = require('./webpack.helpers')
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
 
 module.exports = [
     new ForkTsCheckerWebpackPlugin(),
     isDev() && new webpack.HotModuleReplacementPlugin(),
-    isDev() && new ReactRefreshWebpackPlugin(),
     new HtmlWebpackPlugin({
         template: 'src/index.html',
         favicon: 'public/images/favicon.svg',

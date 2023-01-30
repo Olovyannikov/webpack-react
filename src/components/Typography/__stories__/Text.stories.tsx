@@ -7,31 +7,39 @@ export default {
     argTypes: {
         type: {
             options: ['secondary', 'success', 'warning', 'danger'],
-            control: { type: 'select' },
+            control: 'radio',
         },
         disabled: {
             control: 'boolean',
+            defaultValue: false,
         },
         mark: {
             control: 'boolean',
+            defaultValue: false,
         },
         code: {
             control: 'boolean',
+            defaultValue: false,
         },
         keyboard: {
             control: 'boolean',
+            defaultValue: false,
         },
         underline: {
             control: 'boolean',
+            defaultValue: false,
         },
         delete: {
             control: 'boolean',
+            defaultValue: false,
         },
         strong: {
             control: 'boolean',
+            defaultValue: false,
         },
         italic: {
             control: 'boolean',
+            defaultValue: false,
         },
     },
 } as ComponentMeta<typeof Text>;
@@ -41,91 +49,78 @@ export const TextDefault = (props: TextProps) => {
 };
 
 export const TextSecondary = (props: TextProps) => {
-    return (
-        <Text type="secondary" {...props}>
-            Text Secondary
-        </Text>
-    );
+    return <Text {...props}>Text Secondary</Text>;
+};
+TextSecondary.args = {
+    type: 'secondary',
 };
 export const TextSuccess = (props: TextProps) => {
-    return (
-        <Text type="success" {...props}>
-            Text Success
-        </Text>
-    );
+    return <Text {...props}>Text Success</Text>;
+};
+TextSuccess.args = {
+    type: 'success',
 };
 export const TextWarning = (props: TextProps) => {
-    return (
-        <Text type="warning" {...props}>
-            Text Warning
-        </Text>
-    );
+    return <Text {...props}>Text Warning</Text>;
+};
+TextWarning.args = {
+    type: 'warning',
 };
 export const TextDanger = (props: TextProps) => {
-    return (
-        <Text type="danger" {...props}>
-            Text Danger
-        </Text>
-    );
+    return <Text {...props}>Text Danger</Text>;
+};
+TextDanger.args = {
+    type: 'danger',
 };
 
 export const TextMark = (props: TextProps) => {
-    return (
-        <Text mark {...props}>
-            Text Mark
-        </Text>
-    );
+    return <Text {...props}>Text Mark</Text>;
+};
+TextMark.args = {
+    mark: true,
 };
 
 export const TextCode = (props: TextProps) => {
-    return (
-        <Text code {...props}>
-            Text Code
-        </Text>
-    );
+    return <Text {...props}>Text Code</Text>;
+};
+TextCode.args = {
+    code: true,
 };
 export const TextDisabled = (props: TextProps) => {
-    return (
-        <Text disabled {...props}>
-            Text Disabled
-        </Text>
-    );
+    return <Text {...props}>Text Disabled</Text>;
+};
+TextDisabled.args = {
+    disabled: true,
 };
 export const TextKeyboard = (props: TextProps) => {
-    return (
-        <Text keyboard {...props}>
-            Text Keyboard
-        </Text>
-    );
+    return <Text {...props}>Text Keyboard</Text>;
+};
+TextKeyboard.args = {
+    keyboard: true,
 };
 export const TextUnderline = (props: TextProps) => {
-    return (
-        <Text underline {...props}>
-            Text Underline
-        </Text>
-    );
+    return <Text {...props}>Text Underline</Text>;
+};
+TextUnderline.args = {
+    underline: true,
 };
 export const TextDelete = (props: TextProps) => {
-    return (
-        <Text delete {...props}>
-            Text Delete
-        </Text>
-    );
+    return <Text {...props}>Text Delete</Text>;
+};
+TextDelete.args = {
+    delete: true,
 };
 export const TextStrong = (props: TextProps) => {
-    return (
-        <Text strong {...props}>
-            Text Strong
-        </Text>
-    );
+    return <Text {...props}>Text Strong</Text>;
+};
+TextStrong.args = {
+    strong: true,
 };
 
 export const TextItalic = (props: TextProps) => {
-    return (
-        <Text italic {...props}>
-            Text Italic
-        </Text>
-    );
+    return <Text {...props}>Text Italic</Text>;
 };
-
+TextItalic.args = {
+    italic: true,
+};
 Text.displayName = 'Text';

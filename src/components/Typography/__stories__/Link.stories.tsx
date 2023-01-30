@@ -1,29 +1,34 @@
-import Link, { LinkProps } from 'antd/lib/typography/Link';
+import { Typography } from 'antd';
+import { LinkProps } from 'antd/es/typography/Link';
 import { ComponentMeta } from '@storybook/react';
 
 export default {
     title: 'UI-Kit / General / Typography / Link',
-    component: Link,
+    component: Typography.Link,
     argTypes: {
         href: {
             control: 'text',
-            default: 'https://google.com',
+            defaultValue: 'https://google.com',
         },
         target: {
             control: 'text',
             defaultValue: '_blank',
         },
+        disabled: {
+            control: 'boolean',
+            defaultValue: false,
+        },
     },
-} as ComponentMeta<typeof Link>;
+} as ComponentMeta<typeof Typography.Link>;
 
 export const LinkDefault = (props: LinkProps) => {
     const { href = 'https://sber.ru' } = props;
 
     return (
-        <Link href={href} target="_blank" {...props}>
+        <Typography.Link href={href} target="_blank" {...props}>
             Base Ant Link
-        </Link>
+        </Typography.Link>
     );
 };
 
-Link.displayName = 'Link';
+Typography.Link.displayName = 'Typography.Link';

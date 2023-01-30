@@ -7,41 +7,31 @@ export default {
     argTypes: {
         level: {
             options: [1, 2, 3, 4, 5],
-            control: { type: 'select' },
+            control: 'radio',
         },
     },
 } as ComponentMeta<typeof Title>;
 
-export const H1 = (props: TitleProps) => {
-    return <Title {...props}>Title Level H1</Title>;
+export const H1 = (props: TitleProps) => <Title {...props}>Title Level H{props.level}</Title>;
+H1.args = {
+    level: 1,
 };
-export const H2 = (props: TitleProps) => {
-    return (
-        <Title level={2} {...props}>
-            Title Level H2
-        </Title>
-    );
+export const H2 = (props: TitleProps) => <Title {...props}>Title Level H{props.level}</Title>;
+
+H2.args = {
+    level: 2,
 };
-export const H3 = (props: TitleProps) => {
-    return (
-        <Title level={3} {...props}>
-            Title Level H3
-        </Title>
-    );
+export const H3 = (props: TitleProps) => <Title {...props}>Title Level H{props.level}</Title>;
+H3.args = {
+    level: 3,
 };
-export const H4 = (props: TitleProps) => {
-    return (
-        <Title level={4} {...props}>
-            Title Level H4
-        </Title>
-    );
+export const H4 = (props: TitleProps) => <Title {...props}>Title Level H{props.level}</Title>;
+H4.args = {
+    level: 4,
 };
-export const H5 = (props: TitleProps) => {
-    return (
-        <Title level={5} {...props}>
-            Title Level H5
-        </Title>
-    );
+export const H5 = (props: TitleProps) => <Title {...props}>Title Level H{props.level}</Title>;
+H5.args = {
+    level: 5,
 };
 
 Title.displayName = 'Title';
